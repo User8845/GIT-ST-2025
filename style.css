@@ -1,3 +1,94 @@
-body{
-    background-color: red;
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body, html {
+    height: 100%;
+    background-color: #1e1e1e;
+    overflow: hidden;
+}
+
+.snowflakes {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+}
+
+.snowflake {
+    position: absolute;
+    top: -10px;
+    color: white;
+    font-size: 2rem;
+    animation: fall 10s linear infinite;
+    opacity: 0.7;
+}
+
+@keyframes fall {
+    0% {
+        transform: translateX(0) translateY(-10px);
+    }
+    100% {
+        transform: translateX(var(--random-x)) translateY(100vh);
+    }
+}
+
+.snowflake:nth-child(1) {
+    animation-duration: 12s;
+    left: 10%;
+    animation-delay: -5s;
+    --random-x: 10%;
+}
+
+.snowflake:nth-child(2) {
+    animation-duration: 15s;
+    left: 20%;
+    animation-delay: -3s;
+    --random-x: -10%;
+}
+
+.snowflake:nth-child(3) {
+    animation-duration: 18s;
+    left: 30%;
+    animation-delay: -8s;
+    --random-x: 15%;
+}
+
+.snowflake:nth-child(4) {
+    animation-duration: 10s;
+    left: 40%;
+    animation-delay: -1s;
+    --random-x: -15%;
+}
+
+.snowflake:nth-child(5) {
+    animation-duration: 14s;
+    left: 50%;
+    animation-delay: -4s;
+    --random-x: 20%;
+}
+
+.snowflake:nth-child(6) {
+    animation-duration: 16s;
+    left: 60%;
+    animation-delay: -6s;
+    --random-x: -20%;
+}
+
+.snowflake:nth-child(7) {
+    animation-duration: 13s;
+    left: 70%;
+    animation-delay: -2s;
+    --random-x: 25%;
+}
+
+.snowflake:nth-child(8) {
+    animation-duration: 11s;
+    left: 80%;
+    animation-delay: -7s;
+    --random-x: -25%;
 }
